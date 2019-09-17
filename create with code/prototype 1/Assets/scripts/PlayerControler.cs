@@ -7,6 +7,7 @@ public class PlayerControler : MonoBehaviour
     public float speed;
     public float turnspeed;
     public float horiImput;
+    public float forwardImput;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +19,9 @@ public class PlayerControler : MonoBehaviour
     {
 
         horiImput = Input.GetAxis("Horizontal");
+        forwardImput = Input.GetAxis("Vertical");
         //move the car forward
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        transform.Translate(Vector3.right * Time.deltaTime * turnspeed * horiImput);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardImput);
+        transform.Rotate(Vector3.up, Time.deltaTime * turnspeed * horiImput);
     }
 }
