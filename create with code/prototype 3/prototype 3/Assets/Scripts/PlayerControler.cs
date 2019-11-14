@@ -31,8 +31,9 @@ public class PlayerControler : MonoBehaviour
         if (soyouthinkyoucandance.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-        } else if (soyouthinkyoucandance.gameObject.CompareTag("obstical"))
+        } else if (soyouthinkyoucandance.gameObject.CompareTag("Obstical"))
         {
+            Debug.Log("game over");
             gameOver = true;
         }
     }
