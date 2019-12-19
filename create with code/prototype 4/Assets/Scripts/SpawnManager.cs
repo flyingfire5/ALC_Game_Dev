@@ -11,6 +11,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         Instantiate(enemyPrefab, GenorateSpawnPosition(), enemyPrefab.transform.rotation);
+        spawnEnemyWave(3);
     }
 
     // Update is called once per frame
@@ -25,5 +26,13 @@ public class SpawnManager : MonoBehaviour
         float spawnPosZ = Random.Range(-spawnRange, spawnRange);
         Vector3 randomPos = new Vector3(spawnPosX, 0, spawnPosZ);
         return randomPos;
+    }
+
+    void spawnEnemyWave(int enemysToSpawn)
+    {
+        for (int i = 0; i < enemysToSpawn; i++)
+        {
+            Instantiate(enemyPrefab, GenorateSpawnPosition(), enemyPrefab.transform.rotation);
+        }
     }
 }
