@@ -239,6 +239,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1662118973240983934, guid: e3f118109412c4ff2a189e4b04e603d7,
     type: 3}
+  enemyCount: 0
+  waveNumber: 1
+  powerup: {fileID: 1671016962}
 --- !u!1001 &1060867770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -733,6 +736,12 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 8878a37eb67ddac4ead51890a31d6a18, type: 3}
+--- !u!1 &1671016962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5612516000661784853, guid: 56a0018ea3067411997403efc2b6adfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 7487359104391939886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2006524240 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1672443178567878, guid: 5e5b016a0cd771740aae0b664476d77d,
